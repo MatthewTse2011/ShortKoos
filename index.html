@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>LongKOOS Score Calculator</title>
+	<title>ShortKOOS Score Calculator</title>
 	<style>
 		@font-face{
 			font-family: 'Source Code Pro';
@@ -194,9 +194,7 @@
 	<script text="text/javascript">
 		function runALLFunctions() {
 			calculatePAINscore();
-			calculateSYMPTOMSscore();
 			calculateADLscore();
-			calculateSportscore();
 			calculateQOLscore();
 		}
 
@@ -239,7 +237,7 @@
 				}
 			}
 			var PAINscore = 100 - ((totalScore / totalQuestions) * 100) / 4;
-			document.getElementById("ADL_result").innerHTML = "<br>Your ADL score is: " + PAINscore.toFixed(2) + "/100";
+			document.getElementById("ADL_result").innerHTML = "<br>Your PS score is: " + PAINscore.toFixed(2) + "/100";
 		}
 
 		function calculateSportscore() {
@@ -340,62 +338,15 @@
 		</fieldset>
 		<br>
 		<fieldset>
-			<legend>症狀</legend>
-			<p><strong>請想想你在<u>過去一星期</u>膝關節的症狀，然後回答這些問題。</p></strong>
-			<p>1. 早上剛醒來時，你的膝關節有多僵硬？</p>
-			<input type="radio" name="section10" value="0" class="symptoms_score"> 不會
-			<input type="radio" name="section10" value="1" class="symptoms_score"> 少許
-			<input type="radio" name="section10" value="2" class="symptoms_score"> 普通
-			<input type="radio" name="section10" value="3" class="symptoms_score"> 嚴重
-			<input type="radio" name="section10" value="4" class="symptoms_score"> 極度
-			<br><br><p>2. 坐下、躺下後你的膝關節有多僵硬？</p>
-			<input type="radio" name="section11" value="0" class="symptoms_score"> 不會
-			<input type="radio" name="section11" value="1" class="symptoms_score"> 少許
-			<input type="radio" name="section11" value="2" class="symptoms_score"> 普通
-			<input type="radio" name="section11" value="3" class="symptoms_score"> 嚴重
-			<input type="radio" name="section11" value="4" class="symptoms_score"> 極度
-			<br><br><p>3. 你的膝關節會否腫脹？</p>
-			<input type="radio" name="section12" value="0" class="symptoms_score"> 不會
-			<input type="radio" name="section12" value="1" class="symptoms_score"> 少許
-			<input type="radio" name="section12" value="2" class="symptoms_score"> 普通
-			<input type="radio" name="section12" value="3" class="symptoms_score"> 嚴重
-			<input type="radio" name="section12" value="4" class="symptoms_score"> 極度
-			<br><br><p>4. 當膝關節活動時，你會否感到磨擦，或聽到膝關節發出任何聲音？</p>
-			<input type="radio" name="section13" value="0" class="symptoms_score"> 不會
-			<input type="radio" name="section13" value="1" class="symptoms_score"> 少許
-			<input type="radio" name="section13" value="2" class="symptoms_score"> 普通
-			<input type="radio" name="section13" value="3" class="symptoms_score"> 嚴重
-			<input type="radio" name="section13" value="4" class="symptoms_score"> 極度
-			<br><br><p>5. 你的膝關節在活動時有否卡住？</p>
-			<input type="radio" name="section14" value="0" class="symptoms_score"> 不會
-			<input type="radio" name="section14" value="1" class="symptoms_score"> 少許
-			<input type="radio" name="section14" value="2" class="symptoms_score"> 普通
-			<input type="radio" name="section14" value="3" class="symptoms_score"> 嚴重
-			<input type="radio" name="section14" value="4" class="symptoms_score"> 極度
-			<br><br><p>6. 你能完全伸直膝關節嗎？</p>
-			<input type="radio" name="section15" value="0" class="symptoms_score"> 經常
-			<input type="radio" name="section15" value="1" class="symptoms_score"> 時常
-			<input type="radio" name="section15" value="2" class="symptoms_score"> 有時
-			<input type="radio" name="section15" value="3" class="symptoms_score"> 偶爾
-			<input type="radio" name="section15" value="4" class="symptoms_score"> 不能
-			<br><br><p>7. 你能完全彎曲膝關節嗎？</p>
-			<input type="radio" name="section16" value="0" class="symptoms_score"> 經常
-			<input type="radio" name="section16" value="1" class="symptoms_score"> 時常
-			<input type="radio" name="section16" value="2" class="symptoms_score"> 有時
-			<input type="radio" name="section16" value="3" class="symptoms_score"> 偶爾
-			<input type="radio" name="section16" value="4" class="symptoms_score"> 不能
-		</fieldset>
-		<br>
-		<fieldset>
 			<legend>日常生活</legend>
 			<p><strong>過去一星期，你在進行以下活動時膝關節使你感到有多困難？</p></strong>
-			<p>1. 下樓梯</p>
+			<p>1. 起床</p>
 			<input type="radio" name="section20" value="0" class="ADL_score"> 没有困難
 			<input type="radio" name="section20" value="1" class="ADL_score"> 少許困難
 			<input type="radio" name="section20" value="2" class="ADL_score"> 頗大困難
 			<input type="radio" name="section20" value="3" class="ADL_score"> 非常困難
 			<input type="radio" name="section20" value="4" class="ADL_score"> 極大困難
-			<br><br><p>2. 上樓梯</p>
+			<br><br><p>2. 穿禨子/絲襪</p>
 			<input type="radio" name="section21" value="0" class="ADL_score"> 没有困難
 			<input type="radio" name="section21" value="1" class="ADL_score"> 少許困難
 			<input type="radio" name="section21" value="2" class="ADL_score"> 頗大困難
@@ -407,125 +358,30 @@
 			<input type="radio" name="section22" value="2" class="ADL_score"> 頗大困難
 			<input type="radio" name="section22" value="3" class="ADL_score"> 非常困難
 			<input type="radio" name="section22" value="4" class="ADL_score"> 極大困難
-			<br><br><p>4. 站立</p>
+			<br><br><p>4. 彎腰至地/在地上檢起物品</p>
 			<input type="radio" name="section23" value="0" class="ADL_score"> 没有困難
 			<input type="radio" name="section23" value="1" class="ADL_score"> 少許困難
 			<input type="radio" name="section23" value="2" class="ADL_score"> 頗大困難
 			<input type="radio" name="section23" value="3" class="ADL_score"> 非常困難
 			<input type="radio" name="section23" value="4" class="ADL_score"> 極大困難
-			<br><br><p>5. 彎腰至地/在地上檢起物品</p>
+			<br><br><p>5. 轉動/扭動受傷的膝關節</p>
 			<input type="radio" name="section24" value="0" class="ADL_score"> 没有困難
 			<input type="radio" name="section24" value="1" class="ADL_score"> 少許困難
 			<input type="radio" name="section24" value="2" class="ADL_score"> 頗大困難
 			<input type="radio" name="section24" value="3" class="ADL_score"> 非常困難
 			<input type="radio" name="section24" value="4" class="ADL_score"> 極大困難
-			<br><br><p>6. 在平地步行</p>
+			<br><br><p>6. 跪下</p>
 			<input type="radio" name="section25" value="0" class="ADL_score"> 没有困難
 			<input type="radio" name="section25" value="1" class="ADL_score"> 少許困難
 			<input type="radio" name="section25" value="2" class="ADL_score"> 頗大困難
 			<input type="radio" name="section25" value="3" class="ADL_score"> 非常困難
 			<input type="radio" name="section25" value="4" class="ADL_score"> 極大困難
-			<br><br><p>7. 上車/下車</p>
+			<br><br><p>7. 蹲坐</p>
 			<input type="radio" name="section26" value="0" class="ADL_score"> 没有困難
 			<input type="radio" name="section26" value="1" class="ADL_score"> 少許困難
 			<input type="radio" name="section26" value="2" class="ADL_score"> 頗大困難
 			<input type="radio" name="section26" value="3" class="ADL_score"> 非常困難
 			<input type="radio" name="section26" value="4" class="ADL_score"> 極大困難
-			<br><br><p>8. 逛街購物</p>
-			<input type="radio" name="section27" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section27" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section27" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section27" value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section27" value="4" class="ADL_score"> 極大困難
-			<br><br><p>9. 穿禨子/絲襪</p>
-			<input type="radio" name="section28" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section28" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section28" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section28" value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section28" value="4" class="ADL_score"> 極大困難
-			<br><br><p>10. 起床</p>
-			<input type="radio" name="section29" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section29" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section29" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section29" value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section29" value="4" class="ADL_score"> 極大困難
-			<br><br><p>11. 脫掉襪子/絲襪</p>
-			<input type="radio" name="section30" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section30" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section30" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section30" value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section30" value="4" class="ADL_score"> 極大困難
-			<br><br><p>12. 躺在床上（轉身，維持膝關節姿勢）</p>
-			<input type="radio" name="section31" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section31" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section31" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section31" value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section31" value="4" class="ADL_score"> 極大困難
-			<br><br><p>13. 進出浴缸</p>
-			<input type="radio" name="section36" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section36" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section36" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section36" value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section36" value="4" class="ADL_score"> 極大困難
-			<br><br><p>14. 坐下</p>
-			<input type="radio" name="section32" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section32" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section32" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section32" value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section32" value="4" class="ADL_score"> 極大困難
-			<br><br><p>15. 坐上/離開坐廁</p>
-			<input type="radio" name="section33" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section33" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section33" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section33" value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section33" value="4" class="ADL_score"> 極大困難
-			<br><br><p>16. 做粗重的家務（剷雪、擦地等）</p>
-			<input type="radio" name="section34" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section34" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section34" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section34“ value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section34" value="4" class="ADL_score"> 極大困難
-			<br><br><p>17. 做輕巧的家務 （煮食、除塵等）</p>
-			<input type="radio" name="section35" value="0" class="ADL_score"> 没有困難
-			<input type="radio" name="section35" value="1" class="ADL_score"> 少許困難
-			<input type="radio" name="section35" value="2" class="ADL_score"> 頗大困難
-			<input type="radio" name="section35" value="3" class="ADL_score"> 非常困難
-			<input type="radio" name="section35" value="4" class="ADL_score"> 極大困難
-		</fieldset>
-		<br>
-		<fieldset>
-			<legend>運動與休閒</legend>
-			<p><strong>過去一星期，你在進行以下活動時膝關節有否使你感到困難？</p></strong>
-			<p>1. 蹲坐</p>
-			<input type="radio" name="section40" value="0" class="Sport_score"> 没有困難
-			<input type="radio" name="section40" value="1" class="Sport_score"> 少許困難
-			<input type="radio" name="section40" value="2" class="Sport_score"> 頗大困難
-			<input type="radio" name="section40" value="3" class="Sport_score"> 非常困難
-			<input type="radio" name="section40" value="4" class="Sport_score"> 極大困難
-			<br><br><p>2. 跑步</p>
-			<input type="radio" name="section41" value="0" class="Sport_score"> 没有困難
-			<input type="radio" name="section41" value="1" class="Sport_score"> 少許困難
-			<input type="radio" name="section41" value="2" class="Sport_score"> 頗大困難
-			<input type="radio" name="section41" value="3" class="Sport_score"> 非常困難
-			<input type="radio" name="section41" value="4" class="Sport_score"> 極大困難
-			<br><br><p>3. 跳躍</p>
-			<input type="radio" name="section42" value="0" class="Sport_score"> 没有困難
-			<input type="radio" name="section42" value="1" class="Sport_score"> 少許困難
-			<input type="radio" name="section42" value="2" class="Sport_score"> 頗大困難
-			<input type="radio" name="section42" value="3" class="Sport_score"> 非常困難
-			<input type="radio" name="section42" value="4" class="Sport_score"> 極大困難
-			<br><br><p>4. 轉動／扭動受傷的膝關節</p>
-			<input type="radio" name="section43" value="0" class="Sport_score"> 没有困難
-			<input type="radio" name="section43" value="1" class="Sport_score"> 少許困難
-			<input type="radio" name="section43" value="2" class="Sport_score"> 頗大困難
-			<input type="radio" name="section43" value="3" class="Sport_score"> 非常困難
-			<input type="radio" name="section43" value="4" class="Sport_score"> 極大困難
-			<br><br><p>5. 跪下</p>
-			<input type="radio" name="section44" value="0" class="Sport_score"> 没有困難
-			<input type="radio" name="section44" value="1" class="Sport_score"> 少許困難
-			<input type="radio" name="section44" value="2" class="Sport_score"> 頗大困難
-			<input type="radio" name="section44" value="3" class="Sport_score"> 非常困難
-			<input type="radio" name="section44" value="4" class="Sport_score"> 極大困難
 		</fieldset>
 		<br>
 		<fieldset>
@@ -564,9 +420,7 @@
 		<br>
 		<p style="text-align: center;"><strong>～非常感謝您完成了這份調查中所有的問題～</strong></p>
 		<div id="pain_result"></div>
-		<div id="symptoms_result"></div>
 		<div id="ADL_result"></div>
-		<div id="Sport_result"></div>
 		<div id="QOL_result"></div>
 	</form>
 </body>
